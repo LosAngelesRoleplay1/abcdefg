@@ -296,4 +296,43 @@ main p {
     width: 100px;
     height: 100px;
   }
+
+
+
+  /* Apply fade-in animation to all buttons */
+  .join-button, .info-button, .rules-button, .discord-button, .shop-button {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Slightly offset */
+    animation: fadeIn 1s ease-out forwards; /* Fade in effect */
+  }
+
+  /* Stagger the animation for each button */
+  .join-button {
+    animation-delay: 0s;
+  }
+  .info-button {
+    animation-delay: 0.2s;
+  }
+  .rules-button {
+    animation-delay: 0.4s;
+  }
+  .discord-button {
+    animation-delay: 0.6s;
+  }
+  .shop-button {
+    animation-delay: 0.8s;
+  }
+
+  /* Keyframes for fade-in effect */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* Start slightly below */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Move into place */
+    }
+  }
+
 }
